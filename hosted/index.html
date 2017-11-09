@@ -1,10 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script src="/socket.io/socket.io.js"></script>
-    <script src="/bundle.js"></script>
+  <link rel="stylesheet" type="text/css" href="/style.css"/>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/bundle.js"></script>
+    
 </head>
 <body>
-  <canvas id="myCanvas" width="600" height="400"></canvas>
+  <h1>Quickdraw Archers</h1>
+  <canvas id="myCanvas" width="800" height="400"></canvas>
+  <h2>How To Play</h2>
+  <p>The game will start as soon as their are two players. Fire your arrows at the enemy archer to deplete their health before they deplete yours.</p>
+  <p>1. Click and hold the left mouse button to draw arrow (not visually represented)</p>
+  <p>2. Drag the mouse while still holding down the left mouse button to determine your arrow's trajectory and power (not visually represented)</p>
+  <p>3. Release the left mouse button to fire your arrow</p>
+  <p>Aim for the head! Players have 100 points of health. A hit to the head depletes 30 points, the torso depletes 20 points, and the legs deplete 10 points. (Boxes represent head, torso, and legs from top to bottom). You can only fire one active arrow at a time.</p>
 </body>
 </html>

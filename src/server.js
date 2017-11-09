@@ -9,12 +9,15 @@ const port = process.env.PORT || process.env.NODE_PORT || 3000;
 // read client html files into memory
 const client = fs.readFileSync(`${__dirname}/../hosted/index.html`);
 const bundle = fs.readFileSync(`${__dirname}/../hosted/bundle.js`);
+const style = fs.readFileSync(`${__dirname}/../hosted/style.css`);
 
 // function invoked by HTTP module on requests from clients
 const onRequest = (request, response) => {
   response.writeHead(200);
   if (request.url === '/bundle.js') {
     response.write(bundle);
+  } else if (request.url === '/style.css') {
+    response.write(style);
   } else response.write(client);
   response.end();
 };
